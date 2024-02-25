@@ -18,7 +18,7 @@ const UpdateTask = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8080/api/v1/task/getTaskById/${id}`,
+          `https://task-managment-backend.onrender.com/api/v1/task/getTaskById/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

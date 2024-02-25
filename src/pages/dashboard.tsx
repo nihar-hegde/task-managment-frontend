@@ -44,11 +44,14 @@ const Dashboard = () => {
       setIsLoading(true);
 
       try {
-        const response = await fetch("http://localhost:8080/api/v1/task/get", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await fetch(
+          "https://task-managment-backend.onrender.com/api/v1/task/get",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         if (!response.ok) {
           throw new Error("Failed to fetch tasks!");

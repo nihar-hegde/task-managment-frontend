@@ -54,14 +54,17 @@ const AddTaskForm = () => {
       dueDate: formattedDueDate,
     };
     try {
-      const response = await fetch("http://localhost:8080/api/v1/task/create", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(taskData),
-      });
+      const response = await fetch(
+        "https://task-managment-backend.onrender.com/api/v1/task/create",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(taskData),
+        }
+      );
 
       if (!response.ok) {
         const errorData = await response.json();

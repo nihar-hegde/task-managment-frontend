@@ -22,7 +22,7 @@ const DeleteTask = ({ id }: Props) => {
     try {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:8080/api/v1/task/delete/${id}`,
+        `https://task-managment-backend.onrender.com/api/v1/task/delete/${id}`,
         {
           method: "DELETE",
           headers: {
