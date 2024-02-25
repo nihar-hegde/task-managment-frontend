@@ -1,5 +1,4 @@
 import AddTaskForm from "@/components/AddTaskForm";
-import React from "react";
 
 const AddTask = () => {
   return (
