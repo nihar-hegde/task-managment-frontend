@@ -61,7 +61,9 @@ const UpdateTaskForm = ({ taskDetails }: { taskDetails: Props }) => {
     };
     try {
       const response = await fetch(
-        `https://task-managment-backend.onrender.com/api/v1/task/update/${taskDetails._id}`,
+        `${import.meta.env.VITE_REACT_APP_BASE_URL}/task/update/${
+          taskDetails._id
+        }`,
         {
           method: "PUT",
           headers: {

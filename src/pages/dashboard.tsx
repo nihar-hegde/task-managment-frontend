@@ -45,7 +45,7 @@ const Dashboard = () => {
 
       try {
         const response = await fetch(
-          "https://task-managment-backend.onrender.com/api/v1/task/get",
+          `${import.meta.env.VITE_REACT_APP_BASE_URL}/task/get`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

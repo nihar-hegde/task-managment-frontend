@@ -55,7 +55,7 @@ const AddTaskForm = () => {
     };
     try {
       const response = await fetch(
-        "https://task-managment-backend.onrender.com/api/v1/task/create",
+        `${import.meta.env.VITE_REACT_APP_BASE_URL}/task/create`,
         {
           method: "POST",
           headers: {
@@ -63,7 +63,7 @@ const AddTaskForm = () => {
             Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify(taskData),
-        }
+        },
       );
 
       if (!response.ok) {
@@ -124,7 +124,7 @@ const AddTaskForm = () => {
                       variant={"outline"}
                       className={cn(
                         "pl-3 text-left font-normal",
-                        !field.value && "text-muted-foreground"
+                        !field.value && "text-muted-foreground",
                       )}
                     >
                       {field.value ? (

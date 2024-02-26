@@ -18,12 +18,12 @@ const UpdateTask = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://task-managment-backend.onrender.com/api/v1/task/getTaskById/${id}`,
+          `${import.meta.env.VITE_REACT_APP_BASE_URL}/task/getTaskById/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
             },
-          }
+          },
         );
         const data = await response.json();
         setTaskData(data.taskDetails);

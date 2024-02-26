@@ -22,7 +22,7 @@ const DeleteTask = ({ id }: Props) => {
     try {
       setLoading(true);
       const response = await fetch(
-        `https://task-managment-backend.onrender.com/api/v1/task/delete/${id}`,
+        `${import.meta.env.VITE_REACT_APP_BASE_URL}/task/delete/${id}`,
         {
           method: "DELETE",
           headers: {
