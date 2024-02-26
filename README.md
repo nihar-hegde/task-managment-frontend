@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
+# Task Management Front-end.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Deployed URL: https://task-managment-frontend.vercel.app
 
-Currently, two official plugins are available:
+### Built using:
+-> Vite React
+-> Typescript
+-> Tailwind CSS
+-> Shadcn Component
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Install Locally.
+1. Clone the Repo
+2. add a .env folder
+3. add VITE_REACT_APP_BASE_URL = "https://task-managment-backend.onrender.com/api/v1" or "http://localhost:8080/api/v1"
+4. run `npm install`
+5. run `npm run dev`
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Important
+  The backend is hosted on render and takes a lot of time to spin up for the first time as it is hosted on the free tire and the free tire will sleep after some time of inactivity.
