@@ -7,11 +7,13 @@ import AddTask from "./pages/addTask";
 import AuthProvider from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoutes";
 import UpdateTask from "./pages/updateTask";
+import { Toaster } from "./components/ui/sonner";
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
+        <Toaster />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/signup" element={<SignUpPage />} />

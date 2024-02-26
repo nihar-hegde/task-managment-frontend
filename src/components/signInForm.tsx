@@ -15,6 +15,7 @@ import { Loader } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "@/context/AuthContext";
+import { toast } from "sonner";
 
 const FormSchema = z.object({
   username: z.string().min(2, {
@@ -45,7 +46,7 @@ const SignInForm = () => {
 
       if (!response.ok) {
         const errorrs = await response.json();
-        console.log(errorrs.message);
+        toast(errorrs.message);
         throw new Error("Login failed!");
       }
 
